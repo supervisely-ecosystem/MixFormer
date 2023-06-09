@@ -94,7 +94,7 @@ class ARcm_seg(object):
 
 def add_frame_mask(frame, mask, threshold=0.5):
     mask_new = (mask>threshold)*255 #(H,W)
-    frame_new = frame.copy().astype(np.float)
+    frame_new = frame.copy().astype(np.float64)
     frame_new[...,1] += 0.3*mask_new
     frame_new = frame_new.clip(0,255).astype(np.uint8)
     return frame_new
