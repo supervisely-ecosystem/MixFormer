@@ -1,0 +1,12 @@
+{
+    "image": "mixformer:latest",
+    "runArgs": [
+        "--gpus",
+        "all",
+        "--ipc=host",
+        "--net=host",
+        "--cap-add",
+        "NET_ADMIN"
+    ],
+    "remoteUser": "pedori"
+}
