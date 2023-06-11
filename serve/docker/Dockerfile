@@ -3,9 +3,10 @@ ENV TZ="Europe/Tallinn"
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt update && apt install -y \
-   python3.9 \
+   python3 \
    python3-pip \
-   ffmpeg libsm6 libxext6 liblzma-dev\
+   ffmpeg libsm6 libxext6 liblzma-dev \
+   wireguard iproute2 \
    git \
    wget \
    curl \
