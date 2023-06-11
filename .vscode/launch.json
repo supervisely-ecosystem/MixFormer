@@ -5,12 +5,13 @@
             "name": "Local Debug",
             "type": "python",
             "request": "launch",
-            "program": "${workspaceFolder}/supervisely/serve/src/main.py",
+            "program": "${workspaceFolder}/serve/serve/src/main.py",
             "console": "integratedTerminal",
             "justMyCode": false,
             "env": {
                 "PYTHONPATH": "${workspaceFolder}:${PYTHONPATH}",
                 "LOG_LEVEL": "DEBUG",
+                "SLY_APP_DATA_DIR": "${workspaceFolder}/app_data"
             }
         },
         {
@@ -19,9 +20,9 @@
             "request": "launch",
             "module": "uvicorn",
             "args": [
-                "main:pips.app",
+                "main:mixformer.app",
                 "--app-dir",
-                "./supervisely/serve/src",
+                "./serve/serve/src",
                 "--host",
                 "0.0.0.0",
                 "--port",
@@ -32,12 +33,33 @@
             "jinja": true,
             "justMyCode": false,
             "env": {
-                "PYTHONPATH": "${workspaceFolder}/supervisely/serve/src:${PYTHONPATH}",
+                "PYTHONPATH": "${workspaceFolder}/serve/serve/src:${PYTHONPATH}",
                 "LOG_LEVEL": "DEBUG",
                 "ENV": "production",
                 "DEBUG_WITH_SLY_NET": "1",
-                "SLY_APP_DATA_DIR": "${workspaceFolder}/app_data"
+                "SLY_APP_DATA_DIR": "${workspaceFolder}/app_data",
+                "TEAM_ID": "453"
             }
-        }
+        },
+        {
+            "name": "Tracking test",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/tracking/test.py",
+            "console": "integratedTerminal",
+            "args": [
+                "mixformer_vit_online",
+                "baseline",
+                "--dataset",
+                "otb",
+                "--threads",
+                "0",
+                "--num_gpus",
+                "1",
+                "--params__model",
+                "mixformer_vit_base_online.pth.tar"
+            ],
+            "justMyCode": false
+        },
     ]
 }
