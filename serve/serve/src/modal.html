@@ -1,0 +1,9 @@
+<div>
+    <sly-field title="Model name"
+               description="Select one of the models">
+        <el-select v-model="state.modelName" placeholder="Select">
+            <el-option key="vit" label="MixViT-Large" value="mixformer_vit_online"></el-option>
+            <el-option key="convmae" label="MixViT-L (ConvMAE)" value="mixformer_convmae_online"></el-option>
+        </el-select>
+    </sly-field>
+</div>

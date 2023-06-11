@@ -1,10 +1,7 @@
 {
-    "name": "PIPs object tracking",
+    "name": "MixFormer end-to-end tracking",
     "type": "app",
     "version": "2.0.0",
-    "poster": "https://user-images.githubusercontent.com/115161827/233959102-9c48949f-b353-4a4b-ab7d-c1da99dfd914.jpg",
-    "icon_cover": true,
-    "icon": "https://user-images.githubusercontent.com/115161827/233959116-9d0922c6-e6fc-4f3a-958d-430742533f3a.jpg",
     "categories": [
       "neural network",
       "videos",
@@ -12,8 +9,8 @@
       "serve"
     ],
     "description": "serve and use in videos annotator",
-    "docker_image": "supervisely/pips:1.0.0",
-    "entrypoint": "python -m uvicorn main:pips.app --app-dir ./supervisely/serve/src --host 0.0.0.0 --port 8000 --ws websockets",
+    "docker_image": "supervisely/mixformer:1.0.0",
+    "entrypoint": "python -m uvicorn main:mixformer.app --app-dir ./serve/serve/src --host 0.0.0.0 --port 8000 --ws websockets",
     "port": 8000,
     "modal_template": "src/modal.html",
     "modal_template_state": {
@@ -30,9 +27,6 @@
     ],
     "community_agent": false,
     "allowed_shapes": [
-      "point",
-      "polygon",
-      "graph",
-      "line"
+      "rectangle"
     ]
   }
