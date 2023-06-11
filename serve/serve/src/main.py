@@ -1,9 +1,8 @@
 import os
 import numpy as np
-import cv2
 from dotenv import load_dotenv
 from pathlib import Path
-from typing import Any, Dict, List, Literal
+from typing import Any, Dict, Literal
 from typing_extensions import Literal
 from tqdm import tqdm
 
