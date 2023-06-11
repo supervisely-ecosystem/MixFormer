@@ -7,6 +7,8 @@ from typing import Any, Dict, List, Literal
 from typing_extensions import Literal
 from tqdm import tqdm
 
+from lib.test.evaluation import create_default_local_file_ITP_test
+
 import sly_functions as F
 import supervisely as sly
 import supervisely.imaging.image as sly_image
@@ -15,6 +17,8 @@ from supervisely.nn.prediction_dto import PredictionBBox
 
 
 NAME = os.environ.get("modal.state.modelName", "mixformer_vit_online")
+root = (Path(__file__).parent / ".." / ".." / "..").resolve().absolute()
+
 load_dotenv(os.path.expanduser("~/supervisely.env"))
 
 
@@ -48,11 +52,11 @@ class MixFormer(BBoxTracking):
         return PredictionBBox(class_name, tlbr, None)
 
 
-# if sly.is_debug_with_sly_net() or not sly.is_production():
-#     NAME = "mixformer_vit_online"
-    # model_dir = root / "reference_model"
-# else:
-#     model_dir = Path("/weights")
+if sly.is_debug_with_sly_net() or not sly.is_production():
+    create_default_local_file_ITP_test(str(root), "", str(root / "save"))
+else:
+    create_default_local_file_ITP_test(str(root), "", "/weights")
+
 
 mixformer = MixFormer()
 
