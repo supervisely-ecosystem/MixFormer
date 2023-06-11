@@ -13,8 +13,8 @@ RUN apt update && apt install -y \
    && rm -rf /var/lib/apt/lists/*
 
 RUN mkdir -p "/weights/models"
-RUN cd /weights/models && --no-check-certificate 'vit url' -O mixformer_vit_large_online.pth.tar
-RUN cd /weights/models && --no-check-certificate 'convmae url' -O mixformer_convmae_large_online.pth.tar
+RUN cd /weights/models && --no-check-certificate 'https://github.com/supervisely-ecosystem/MixFormer/releases/download/v0.0.1-alpha/mixformer_vit_large_online.pth.tar' -O mixformer_vit_large_online.pth.tar
+RUN cd /weights/models && --no-check-certificate 'https://github.com/supervisely-ecosystem/MixFormer/releases/download/v0.0.1-alpha/mixformer_convmae_large_online.pth.tar' -O mixformer_convmae_large_online.pth.tar
 
 RUN mkdir /reqsh
 COPY ./install_pytorch17.sh /reqsh/install_pytorch17.sh
