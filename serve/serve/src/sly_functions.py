@@ -10,7 +10,7 @@ class SupportedModels(Enum):
 
     @classmethod
     def instance_by_name(cls, name):
-        if "vit" in name:
+        if "mixformer_vit_online" in name:
             return SupportedModels.VIT
         return SupportedModels.CONVMAE
 
