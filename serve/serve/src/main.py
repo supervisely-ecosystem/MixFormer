@@ -68,11 +68,9 @@ else:
     start, end = 80, 180
     imgs_pth = [img_path / name for name in imgs_names[start:end] if 'jpg' in name]
 
+    # top left bottom right order
     start_object = PredictionBBox("", [187, 244, 236, 365], None)
     images = [sly_image.read(str(pth)) for pth in imgs_pth]
-
-    # cv2.rectangle(images[0], (427, 175), (490, 325), color=(0,0,255), thickness=5)
-    # cv2.imwrite(f"/workspaces/MixFormer/data/ch_soccer/predicted/test.jpg", images[0])
 
     preds = []
     mixformer.initialize(images[0], start_object)
