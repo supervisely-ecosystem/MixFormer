@@ -57,13 +57,12 @@ if sly.is_debug_with_sly_net() or not sly.is_production():
 else:
     create_default_local_file_ITP_test(str(root), "", "/weights")
 
-
 mixformer = MixFormer()
 
 if sly.is_production():
     mixformer.serve()
 else:
-    data_path = Path("/workspaces/MixFormer/data")
+    data_path = root / "data"
     img_path = data_path / "racing"
     out = img_path / "predicted"
     out.mkdir(exist_ok=True, parents=True)
