@@ -1,17 +1,17 @@
 # FROM nvidia/cuda:11.8.0-devel-ubuntu20.04
-FROM nvidia/cuda:11.0.3-devel-ubuntu20.04
+FROM nvidia/cuda:11.1.1-devel-ubuntu20.04
 ENV TZ="Europe/Tallinn"
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt update && apt install -y \
-    make build-essential libssl-dev \
-    ffmpeg libsm6 libxext6 liblzma-dev \
-    libbz2-dev libreadline-dev zlib1g-dev \
-    libncursesw5-dev libffi-dev tk-dev \
-    git wireguard iproute2 \
-    wget python3 python3-pip \
-    curl \
-    && rm -rf /var/lib/apt/lists/*
+   make build-essential libssl-dev \
+   ffmpeg libsm6 libxext6 liblzma-dev \
+   libbz2-dev libreadline-dev zlib1g-dev \
+   libncursesw5-dev libffi-dev tk-dev \
+   git wireguard iproute2 \
+   wget python3 python3-pip \
+   curl \
+   && rm -rf /var/lib/apt/lists/*
 
 # ENV PYTHON_VERSION=3.9.6
 # RUN wget "https://www.python.org/ftp/python/${PYTHON_VERSION}/Python-${PYTHON_VERSION}.tar.xz" && \
@@ -31,7 +31,7 @@ RUN cd /weights/models && wget --no-check-certificate 'https://github.com/superv
 RUN apt update && apt install -y ninja-build
 RUN pip3 install --upgrade pip
 RUN pip3 install --upgrade pillow setuptools wheel
-RUN pip3 install torch==1.7.1+cu110 torchvision==0.8.2+cu110 -f https://download.pytorch.org/whl/torch_stable.html
+RUN pip3 install torch==1.8.1+cu111 torchvision==0.9.1+cu111 -f https://download.pytorch.org/whl/torch_stable.html
 
 RUN mkdir /reqs
 COPY requirements.txt /reqs/requirements.txt
