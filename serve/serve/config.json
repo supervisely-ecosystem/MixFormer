@@ -14,7 +14,7 @@
     "port": 8000,
     "modal_template": "serve/serve/src/modal.html",
     "modal_template_state": {
-      "shapeComplexity": "mixformer_vit_online"
+      "modelName": "mixformer_vit_online"
     },
     "task_location": "application_sessions",
     "isolate": true,
