@@ -1,5 +1,5 @@
 {
-    "name": "MixFormer end-to-end tracking",
+    "name": "MixFormer object tracking",
     "type": "app",
     "version": "2.0.0",
     "categories": [
