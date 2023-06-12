@@ -7,6 +7,7 @@ from typing_extensions import Literal
 from tqdm import tqdm
 
 from lib.test.evaluation import create_default_local_file_ITP_test
+from lib.train.admin import create_default_local_file_ITP_train
 
 import sly_functions as F
 import supervisely as sly
@@ -53,8 +54,11 @@ class MixFormer(BBoxTracking):
 
 if sly.is_debug_with_sly_net() or not sly.is_production():
     create_default_local_file_ITP_test(str(root), "", str(root / "save"))
+    create_default_local_file_ITP_train(str(root), "")
 else:
     create_default_local_file_ITP_test(str(root), "", "/weights")
+    create_default_local_file_ITP_train(str(root), "")
+
 
 mixformer = MixFormer()
 
