@@ -8,7 +8,7 @@
       "detection & tracking",
       "serve"
     ],
-    "description": "serve and use in videos annotator",
+    "description": "CVPR2022 SOTA video object tracking",
     "docker_image": "supervisely/mixformer:1.0.2",
     "entrypoint": "python -m uvicorn main:mixformer.app --app-dir ./serve/serve/src --host 0.0.0.0 --port 8000 --ws websockets",
     "port": 8000,
