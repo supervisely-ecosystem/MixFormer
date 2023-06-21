@@ -1,7 +1,25 @@
-# MixFormer object tracking
+<div align="center" markdown>
 
-state-of-the art interactive object tracking (CVPR2022) integrated into Supervisely Videos Labeling tool
+<img src="https://github.com/supervisely-ecosystem/MixFormer/assets/12828725/6a8e0b07-9a2a-4fd8-a34b-58e589b3a10a"/>  
 
+# MixFormer object tracking (CVPR2022)
+
+state-of-the-art interactive object tracking (CVPR2022) integrated into Supervisely Videos Labeling tool
+
+<p align="center">
+  <a href="#Original-work">Original work</a> •
+  <a href="#How-To-Run">How To Run</a> •
+  <a href="#How-To-Use">How To Use</a> •
+    <a href="#Demo">Demo</a>
+</p>
+
+[![](https://img.shields.io/badge/supervisely-ecosystem-brightgreen)](https://ecosystem.supervise.ly/apps/supervisely-ecosystem/mixformer)
+[![](https://img.shields.io/badge/slack-chat-green.svg?logo=slack)](https://supervise.ly/slack)
+![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/supervisely-ecosystem/mixformer)
+[![views](https://app.supervise.ly/img/badges/views/supervisely-ecosystem/mixformer.png)](https://supervise.ly)
+[![runs](https://app.supervise.ly/img/badges/runs/supervisely-ecosystem/mixformer.png)](https://supervise.ly)
+
+</div>
 
 # Original work
 
@@ -41,18 +59,17 @@ Mixformer is an end-to-end tracking framework without post-processing.
 # How to run
 
 
-1. Add *add link* from Ecosystem
+1. Add [MixFormer object tracking (CVPR2022)](https://ecosystem.supervise.ly/apps/supervisely-ecosystem/mix-former/supervisely/serve) from Ecosystem.
 
+2. Run the app from **Neural Networks** page:
 
-2. Run the app from **Plugins & Apps** page:
+3. Select the model name [MixViT-L](#strong-performance) is the default.
 
-3. Select the model name. [MixViT-L](#strong-performance) is the default 
+4. Run app on an agent with `GPU`.
 
-4. Run app on an agent with `GPU`
+4. The model has been successfully deployed.
 
-4. The model has been successfully deployed
-
-5. Use in `Videos Annotator` 
+5. Use in `Videos Annotator`.
 
 
 
@@ -76,4 +93,13 @@ Mixformer is an end-to-end tracking framework without post-processing.
 
 # Demo
 
-### :sparkles: TODO :sparkles:
+We have prepared a videos and demonstrated how TransT works:
+
+https://github.com/supervisely-ecosystem/MixFormer/assets/119248312/6bd93aa7-d9c3-4a5b-8dd3-758d179bf88f
+
+https://github.com/supervisely-ecosystem/MixFormer/assets/119248312/877dc5f4-275f-4e06-b2df-ad2509a0e3ca
+
+https://github.com/supervisely-ecosystem/MixFormer/assets/119248312/c32a46eb-b202-4618-9f3e-91d4391d4ec8
+
+https://github.com/supervisely-ecosystem/MixFormer/assets/119248312/893bce9c-c700-4947-ac3c-4e51b7c8c72f
+
