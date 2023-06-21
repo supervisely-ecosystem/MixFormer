@@ -107,10 +107,10 @@ Mixformer is an end-to-end tracking framework without post-processing.
 
 # Demo
 
-We have prepared a videos and demonstrated how MixFormer works:
+We have prepared videos and demonstrated how MixFormer works:
 
-https://github.com/supervisely-ecosystem/MixFormer/assets/119248312/78b67bfc-d947-4c29-b886-d64445c54944
+https://user-images.githubusercontent.com/119248312/247612713-78b67bfc-d947-4c29-b886-d64445c54944.webm
 
-https://github.com/supervisely-ecosystem/MixFormer/assets/119248312/eab83a4b-527e-4b2a-b3e0-f9a0bfef5c4e
+https://user-images.githubusercontent.com/119248312/eab83a4b-527e-4b2a-b3e0-f9a0bfef5c4e.webm
 
-https://github.com/supervisely-ecosystem/MixFormer/assets/119248312/177c7e67-8657-4a8d-b920-3ebfe1126547
+https://user-images.githubusercontent.com/119248312/177c7e67-8657-4a8d-b920-3ebfe1126547.webm
