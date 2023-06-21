@@ -105,7 +105,7 @@ Mixformer is an end-to-end tracking framework without post-processing.
 
 # Demo
 
-We have prepared a videos and demonstrated how TransT works:
+We have prepared a videos and demonstrated how MixFormer works:
 
 https://github.com/supervisely-ecosystem/MixFormer/assets/119248312/6bd93aa7-d9c3-4a5b-8dd3-758d179bf88f
 
