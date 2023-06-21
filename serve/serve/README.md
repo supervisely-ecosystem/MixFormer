@@ -23,7 +23,7 @@ state-of-the-art interactive object tracking (CVPR2022) integrated into Supervis
 
 # Original work
 
-Original work available by hyperlinks: [**paper (CVPR2022)**](https://arxiv.org/abs/2203.11082) and [**code**](https://github.com/MCG-NJU/MixFormer).
+Original work is available here: [**paper (CVPR2022)**](https://arxiv.org/abs/2203.11082) and [**code**](https://github.com/MCG-NJU/MixFormer).
 
 ![Architecture](https://raw.githubusercontent.com/MCG-NJU/MixFormer/main/tracking/mixformer_merge_framework.png)
 
