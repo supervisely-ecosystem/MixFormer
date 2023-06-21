@@ -66,7 +66,7 @@ Mixformer is an end-to-end tracking framework without post-processing.
 
 <img src="https://github.com/supervisely-ecosystem/MixFormer/assets/119248312/81f8a297-f4fc-48f3-854e-81674f252c36"/>  
 
-3. Select the model name [MixViT-L](#strong-performance) is the default.
+3. Select the model [MixViT-L](#strong-performance).
 
 4. Run app on an agent with `GPU`.
 
