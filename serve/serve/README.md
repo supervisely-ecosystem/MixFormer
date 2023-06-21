@@ -60,20 +60,22 @@ Mixformer is an end-to-end tracking framework without post-processing.
 
 1. Add [MixFormer object tracking (CVPR2022)](https://ecosystem.supervise.ly/apps/supervisely-ecosystem/mix-former/serve/serve) from Ecosystem.  
 
-<img data-key="sly-module-link" data-module-slug="supervisely-ecosystem/mixformer/serve/serve" src="XXX" width="600px" style='padding-bottom: 20px'/> 
+<img data-key="sly-module-link" data-module-slug="supervisely-ecosystem/mixformer/serve/serve" src="https://github.com/supervisely-ecosystem/MixFormer/assets/119248312/e74e2bd9-f915-48b1-bb97-ee808326dff5" width="500px" style='padding-bottom: 20px'/> 
 
-2. Run the app from **Neural Networks** page:
+2. Run the app from **Neural Networks** page from category **detection & tracking videos**.
+
+<img src="https://github.com/supervisely-ecosystem/MixFormer/assets/119248312/81f8a297-f4fc-48f3-854e-81674f252c36"/>  
 
 3. Select the model name [MixViT-L](#strong-performance) is the default.
 
 4. Run app on an agent with `GPU`.
 
-4. The model has been successfully deployed.
+<img src="https://github.com/supervisely-ecosystem/MixFormer/assets/119248312/7b684bdb-2cbc-4d9f-8cc9-d5e9212c6b17"/>
 
 5. Use in `Videos Annotator`.
 
-
-
+<img src="https://github.com/supervisely-ecosystem/MixFormer/assets/119248312/fa438859-b46f-423f-b8a9-78e52396613e"/>
+   
 # How to use
 
 <table>
