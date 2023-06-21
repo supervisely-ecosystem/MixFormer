@@ -58,8 +58,9 @@ Mixformer is an end-to-end tracking framework without post-processing.
 
 # How to run
 
+1. Add [MixFormer object tracking (CVPR2022)](https://ecosystem.supervise.ly/apps/supervisely-ecosystem/mix-former/serve/serve) from Ecosystem.  
 
-1. Add [MixFormer object tracking (CVPR2022)](https://ecosystem.supervise.ly/apps/supervisely-ecosystem/mix-former/supervisely/serve) from Ecosystem.
+<img data-key="sly-module-link" data-module-slug="supervisely-ecosystem/mixformer/serve/serve" src="XXX" width="600px" style='padding-bottom: 20px'/> 
 
 2. Run the app from **Neural Networks** page:
 
@@ -75,7 +76,16 @@ Mixformer is an end-to-end tracking framework without post-processing.
 
 # How to use
 
-### :sparkles: TODO :sparkles:
+<table>
+  <tr style="width: 100%">
+    <td>
+      <a data-key="sly-embeded-video-link" href="https://youtu.be/EMvqTFu1ILE" data-video-code="EMvqTFu1ILE">     <img src="https://imgur.com/a19csV9.jpg" alt="SLY_EMBEDED_VIDEO_LINK"  style="width:100%;"> </a>
+    </td>
+    <td>
+      <a data-key="sly-embeded-video-link" href="https://youtu.be/Xa6WeIgw_mI" data-video-code="Xa6WeIgw_mI">     <img src="https://imgur.com/n2P5qSL.jpg" alt="SLY_EMBEDED_VIDEO_LINK"  style="max-width:100%;"> </a> 
+    </td>
+  </tr>
+</table>
 
 
 # Controls
