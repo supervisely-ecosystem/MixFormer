@@ -1,5 +1,5 @@
 {
-    "name": "MixFormer object tracking",
+    "name": "MixFormer object tracking (CVPR2022)",
     "type": "app",
     "version": "2.0.0",
     "categories": [
@@ -17,6 +17,9 @@
       "modelName": "mixformer_vit_online"
     },
     "task_location": "application_sessions",
+    "icon": "https://github.com/supervisely-ecosystem/MixFormer/assets/119248312/cb8350bf-830d-4a86-9d21-6bade9a35e67",
+    "icon_cover": true,
+    "poster": "https://github.com/supervisely-ecosystem/MixFormer/assets/12828725/6a8e0b07-9a2a-4fd8-a34b-58e589b3a10a",
     "isolate": true,
     "headless": true,
     "need_gpu": true,
