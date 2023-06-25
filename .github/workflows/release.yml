@@ -20,4 +20,4 @@ jobs:
       IGNORE_SLY_RELEASES: 1
       RELEASE_WITH_SLUG: 1
       CHECK_PREV_RELEASES: 1
-      SUBAPP_PATHS: "__ROOT_APP__"
+      SUBAPP_PATHS: "tree/main/serve/serve"
