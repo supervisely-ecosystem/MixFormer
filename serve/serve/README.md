@@ -83,10 +83,10 @@ Mixformer is an end-to-end tracking framework without post-processing.
 <table>
   <tr style="width: 100%">
     <td>
-      <a data-key="sly-embeded-video-link" href="https://youtu.be/EMvqTFu1ILE" data-video-code="EMvqTFu1ILE">     <img src="https://imgur.com/a19csV9.jpg" alt="SLY_EMBEDED_VIDEO_LINK"  style="width:100%;"> </a>
+      <a data-key="sly-embeded-video-link" href="https://youtu.be/EMvqTFu1ILE" data-video-code="EMvqTFu1ILE">     <img src="media/htu1.jpeg" alt="SLY_EMBEDED_VIDEO_LINK"  style="width:100%;"> </a>
     </td>
     <td>
-      <a data-key="sly-embeded-video-link" href="https://youtu.be/Xa6WeIgw_mI" data-video-code="Xa6WeIgw_mI">     <img src="https://imgur.com/n2P5qSL.jpg" alt="SLY_EMBEDED_VIDEO_LINK"  style="max-width:100%;"> </a> 
+      <a data-key="sly-embeded-video-link" href="https://youtu.be/Xa6WeIgw_mI" data-video-code="Xa6WeIgw_mI">     <img src="media/htu2.jpeg" alt="SLY_EMBEDED_VIDEO_LINK"  style="max-width:100%;"> </a> 
     </td>
   </tr>
 </table>
