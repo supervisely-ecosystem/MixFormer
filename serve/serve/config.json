@@ -31,5 +31,8 @@
     "community_agent": false,
     "allowed_shapes": [
       "rectangle"
-    ]
+    ],
+    "license": {
+        "type": "MIT"
+    }
   }
