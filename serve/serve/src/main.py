@@ -47,7 +47,7 @@ class MixFormer(BBoxTracking):
         class_name = target_bbox.class_name
         x, y, w, h = self.model.track(rgb_image)
         # tlbr = [int(y), int(x), int(y + h), int(x + w)]
-        max_h, max_w = rgb_image.shape
+        max_h, max_w, _ = rgb_image.shape
         tlbr = self._build_bbox_params(x, y, w, h, max_w, max_h)
         return PredictionBBox(class_name, tlbr, None)
 
