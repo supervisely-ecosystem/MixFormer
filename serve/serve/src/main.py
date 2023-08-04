@@ -46,13 +46,11 @@ class MixFormer(BBoxTracking):
     ) -> PredictionBBox:
         class_name = target_bbox.class_name
         x, y, w, h = self.model.track(rgb_image)
-        # tlbr = [int(y), int(x), int(y + h), int(x + w)]
         max_h, max_w, _ = rgb_image.shape
         tlbr = self._build_bbox_params(x, y, w, h, max_w, max_h)
         return PredictionBBox(class_name, tlbr, None)
 
     def _build_bbox_params(self, x: float, y: float, w: float, h: float, max_w: int, max_h: int):
-        sly.logger.debug(f"Image height={max_h}, width={max_w}")
         top = min(max(0, int(y)), max_h - 1)
         left = min(max(0, int(x)), max_w - 1)
         bottom = min(max(0, int(y + h)), max_h - 1)
