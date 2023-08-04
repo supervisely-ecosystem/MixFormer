@@ -31,9 +31,7 @@ class MixFormer(BBoxTracking):
         name = F.SupportedModels.instance_by_name(NAME)
         self.model = F.Tracker(name)
 
-    def initialize(
-        self, init_rgb_image: np.ndarray, target_bbox: PredictionBBox
-    ) -> None:
+    def initialize(self, init_rgb_image: np.ndarray, target_bbox: PredictionBBox) -> None:
         y1, x1, y2, x2 = target_bbox.bbox_tlbr
         w = abs(x2 - x1)
         h = abs(y2 - y1)
@@ -48,8 +46,16 @@ class MixFormer(BBoxTracking):
     ) -> PredictionBBox:
         class_name = target_bbox.class_name
         x, y, w, h = self.model.track(rgb_image)
-        tlbr = [int(y), int(x), int(y + h), int(x + w)]
+        max_h, max_w, _ = rgb_image.shape
+        tlbr = self._build_bbox_params(x, y, w, h, max_w, max_h)
         return PredictionBBox(class_name, tlbr, None)
+
+    def _build_bbox_params(self, x: float, y: float, w: float, h: float, max_w: int, max_h: int):
+        top = min(max(0, int(y)), max_h - 1)
+        left = min(max(0, int(x)), max_w - 1)
+        bottom = min(max(0, int(y + h)), max_h - 1)
+        right = min(max(0, int(x + w)), max_w - 1)
+        return [top, left, bottom, right]
 
 
 if sly.is_debug_with_sly_net() or not sly.is_production():
@@ -72,7 +78,7 @@ else:
     imgs_names = sorted(os.listdir(img_path))
 
     start, end = 80, 180
-    imgs_pth = [img_path / name for name in imgs_names[start:end] if 'jpg' in name]
+    imgs_pth = [img_path / name for name in imgs_names[start:end] if "jpg" in name]
 
     # top left bottom right order
     start_object = PredictionBBox("", [187, 244, 236, 365], None)
