@@ -2,6 +2,10 @@
 
 <img src="https://github.com/supervisely-ecosystem/MixFormer/assets/12828725/6a8e0b07-9a2a-4fd8-a34b-58e589b3a10a"/>  
 
+🔥🔥🔥 Check out our [youtube tutorial](https://youtu.be/nyMilMvF3FM) and the [complete guide to Object Tracking in our blog ](https://supervisely.com/blog/complete-guide-to-object-tracking-best-ai-models-tools-and-methods-in-2023/)
+
+<a href="https://youtu.be/nyMilMvF3FM" target="_blank"><img src="https://github.com/supervisely/blog-raw-media-content/assets/106374579/1c397223-0793-4130-bbcd-a0e7ea076fe2"/></a>
+
 # MixFormer object tracking (CVPR2022)
 
 state-of-the-art interactive object tracking (CVPR2022) integrated into Supervisely Videos Labeling tool
