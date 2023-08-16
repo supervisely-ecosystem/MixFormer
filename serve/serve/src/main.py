@@ -17,8 +17,8 @@ from supervisely.nn.prediction_dto import PredictionBBox
 
 
 NAME = os.environ.get("modal.state.modelName", "mixformer_vit_online")
-os.environ["SMART_CACHE_TTL"] = 5 * 60
-os.environ["SMART_CACHE_SIZE"] = 512
+os.environ["SMART_CACHE_TTL"] = str(5 * 60)
+os.environ["SMART_CACHE_SIZE"] = str(512)
 
 root = (Path(__file__).parent / ".." / ".." / "..").resolve().absolute()
 
