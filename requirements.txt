@@ -1,5 +1,5 @@
 # supervisely==6.73.44
-git+https://github.com/supervisely/supervisely.git@gpu-cloud
+git+https://github.com/supervisely/supervisely.git@bbox_tracking_debug
 PyYAML
 easydict
 cython
