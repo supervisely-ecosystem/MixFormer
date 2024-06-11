@@ -1,38 +1,38 @@
 {
-    "name": "MixFormer object tracking (CVPR2022)",
-    "type": "app",
-    "version": "2.0.0",
-    "categories": [
-      "neural network",
-      "videos",
-      "detection & tracking",
-      "serve"
-    ],
-    "description": "CVPR2022 SOTA video object tracking",
-    "docker_image": "supervisely/mixformer:1.0.2",
-    "entrypoint": "python -m uvicorn main:mixformer.app --app-dir ./serve/serve/src --host 0.0.0.0 --port 8000 --ws websockets",
-    "port": 8000,
-    "modal_template": "serve/serve/src/modal.html",
-    "modal_template_state": {
-      "modelName": "mixformer_vit_online"
-    },
-    "task_location": "application_sessions",
-    "icon": "https://github.com/supervisely-ecosystem/MixFormer/assets/119248312/cb8350bf-830d-4a86-9d21-6bade9a35e67",
-    "icon_cover": true,
-    "poster": "https://github.com/supervisely-ecosystem/MixFormer/assets/12828725/6a8e0b07-9a2a-4fd8-a34b-58e589b3a10a",
-    "isolate": true,
-    "headless": true,
-    "need_gpu": true,
-    "instance_version": "6.7.40",
-    "restart_policy": "on_error",
-    "session_tags": [
-      "sly_video_tracking"
-    ],
-    "community_agent": false,
-    "allowed_shapes": [
-      "rectangle"
-    ],
-    "license": {
-        "type": "MIT"
-    }
+  "name": "MixFormer object tracking (CVPR2022)",
+  "type": "app",
+  "version": "2.0.0",
+  "categories": [
+    "neural network",
+    "videos",
+    "detection & tracking",
+    "serve"
+  ],
+  "description": "CVPR2022 SOTA video object tracking",
+  "docker_image": "supervisely/mixformer:1.0.2",
+  "entrypoint": "python -m uvicorn main:mixformer.app --app-dir ./serve/serve/src --host 0.0.0.0 --port 8000 --ws websockets",
+  "port": 8000,
+  "modal_template": "serve/serve/src/modal.html",
+  "modal_template_state": {
+    "modelName": "mixformer_vit_online"
+  },
+  "task_location": "application_sessions",
+  "icon": "https://github.com/supervisely-ecosystem/MixFormer/assets/119248312/cb8350bf-830d-4a86-9d21-6bade9a35e67",
+  "icon_cover": true,
+  "poster": "https://github.com/supervisely-ecosystem/MixFormer/assets/12828725/6a8e0b07-9a2a-4fd8-a34b-58e589b3a10a",
+  "isolate": true,
+  "headless": true,
+  "need_gpu": true,
+  "instance_version": "6.7.40",
+  "restart_policy": "on_error",
+  "session_tags": [
+    "sly_video_tracking"
+  ],
+  "community_agent": false,
+  "allowed_shapes": [
+    "rectangle"
+  ],
+  "license": {
+    "type": "MIT"
   }
+}
