@@ -4,4 +4,7 @@ ENV TZ="Europe/Tallinn"
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN pip3 install --upgrade setuptools==70.3.0
-RUN pip3 install git+https://github.com/supervisely/supervisely.git@cache-error-fix
+
+RUN mkdir /reqs
+COPY dev_requirements.txt /reqs/requirements.txt
+RUN pip3 install -r /reqs/requirements.txt

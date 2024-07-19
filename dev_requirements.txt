@@ -9,7 +9,7 @@ pycocotools
 jpeg4py
 tb-nightly
 tikzplotlib
-git+https://github.com/Lyken17/pytorch-OpCounter.git
+# git+https://github.com/Lyken17/pytorch-OpCounter.git
 colorama
 lmdb
 scipy
