@@ -16,7 +16,7 @@ scipy
 visdom
 git+https://github.com/votchallenge/vot-toolkit-python
 onnx
-onnxruntime-gpu==1.7.0
+onnxruntime-gpu==1.10.0
 timm==0.4.12
 yacs
 einops
