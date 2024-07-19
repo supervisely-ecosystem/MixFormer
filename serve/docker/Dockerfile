@@ -4,14 +4,14 @@ ENV TZ="Europe/Tallinn"
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt update && apt install -y \
-   make build-essential libssl-dev \
-   ffmpeg libsm6 libxext6 liblzma-dev \
-   libbz2-dev libreadline-dev zlib1g-dev \
-   libncursesw5-dev libffi-dev tk-dev \
-   git wireguard iproute2 \
-   wget python3 python3-pip \
-   curl \
-   && rm -rf /var/lib/apt/lists/*
+    make build-essential libssl-dev \
+    ffmpeg libsm6 libxext6 liblzma-dev \
+    libbz2-dev libreadline-dev zlib1g-dev \
+    libncursesw5-dev libffi-dev tk-dev \
+    git wireguard iproute2 \
+    wget python3 python3-pip \
+    curl \
+    && rm -rf /var/lib/apt/lists/*
 
 # ENV PYTHON_VERSION=3.9.6
 # RUN wget "https://www.python.org/ftp/python/${PYTHON_VERSION}/Python-${PYTHON_VERSION}.tar.xz" && \
@@ -34,7 +34,7 @@ RUN pip3 install --upgrade pillow setuptools wheel
 RUN pip3 install torch==1.8.1+cu111 torchvision==0.9.1+cu111 -f https://download.pytorch.org/whl/torch_stable.html
 
 RUN mkdir /reqs
-COPY requirements.txt /reqs/requirements.txt
+COPY dev_requirements.txt /reqs/requirements.txt
 RUN pip3 install -r /reqs/requirements.txt
 
 RUN apt update && apt install -y python-is-python3
