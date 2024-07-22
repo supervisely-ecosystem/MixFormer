@@ -5,6 +5,7 @@ from pathlib import Path
 from typing import Any, Dict, Literal
 from typing_extensions import Literal
 from tqdm import tqdm
+import torch
 
 from lib.test.evaluation import create_default_local_file_ITP_test
 from lib.train.admin import create_default_local_file_ITP_train
@@ -47,6 +48,7 @@ class MixFormer(BBoxTracking):
         prev_rgb_image: np.ndarray,
         target_bbox: PredictionBBox,
     ) -> PredictionBBox:
+        torch.set_grad_enabled(False)
         class_name = target_bbox.class_name
         x, y, w, h = self.model.track(rgb_image)
         max_h, max_w, _ = rgb_image.shape
