@@ -26,7 +26,8 @@
   "instance_version": "6.7.40",
   "restart_policy": "on_error",
   "session_tags": [
-    "sly_video_tracking"
+    "sly_video_tracking",
+    "scalable"
   ],
   "community_agent": false,
   "allowed_shapes": [
