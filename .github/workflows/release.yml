@@ -63,7 +63,7 @@ jobs:
         with:
           registry: ${{ secrets.DOCKER_ENTERPRISE_REGISTRY }}
           username: ${{ secrets.DOCKER_USERNAME_ENTERPRISE }}
-          password: ${{ secrets.DOCKER_PASSWORD_ENTERPRISE }}s
+          password: ${{ secrets.DOCKER_PASSWORD_ENTERPRISE }}
 
       - name: Build and Push
         uses: docker/build-push-action@v5
