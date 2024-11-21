@@ -35,15 +35,15 @@ jobs:
       - name: Validate tag
         run: |
           TAG_NAME="${{ github.event.release.tag_name }}"
-            if [[ ! "$TAG_NAME" =~ ^v?[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
-                echo "Tag name should be in format v1.2.3 or 1.2.3"
-                exit 1
-            fi
+          if [[ ! "$TAG_NAME" =~ ^v?[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+            echo "Tag name should be in format v1.2.3 or 1.2.3"
+            exit 1
+          fi
 
-            CLEANED_TAG="${TAG_NAME#v}"
-            IMAGE_TAG="${{ env.IMAGE_NAME }}:${CLEANED_TAG}"
-            echo "IMAGE_TAG=$IMAGE_TAG" >> $GITHUB_ENV
-            echo "Validated and set image tag: $IMAGE_TAG"
+          CLEANED_TAG="${TAG_NAME#v}"
+          IMAGE_TAG="${{ env.IMAGE_NAME }}:${CLEANED_TAG}"
+          echo "IMAGE_TAG=$IMAGE_TAG" >> $GITHUB_ENV
+          echo "Validated and set image tag: $IMAGE_TAG"
 
       - name: Checkout
         uses: actions/checkout@v4
