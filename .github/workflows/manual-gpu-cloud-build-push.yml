@@ -1,4 +1,4 @@
-name: GPU-CLoud Docker Image Build
+name: GPU-Cloud Docker Image Build
 
 on: 
   workflow_dispatch:
