@@ -33,6 +33,7 @@ class Tracker(object):
         params = param_module.parameters(self.parameter_name, self.model, search_area_scale)
         # params.update_interval = 20
         # params.online_sizes = 5
+        params.update_interval = 5
         self.tracker = tracker_class(params, "vot20")
     
     def initialize(self, rgb_image: Mat, x: int, y: int, w: int, h: int):
