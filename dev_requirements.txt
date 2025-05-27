@@ -1,4 +1,4 @@
-supervisely==6.73.285
+supervisely==6.73.368
 # git+https://github.com/supervisely/supervisely.git@server-healthchecks-and-cache-error-fix
 PyYAML
 easydict
