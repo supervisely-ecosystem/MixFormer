@@ -14,7 +14,8 @@ colorama
 lmdb
 scipy
 visdom
-git+https://github.com/votchallenge/vot-toolkit-python
+vot-toolkit==0.7.1
+# git+https://github.com/votchallenge/vot-toolkit-python
 onnx
 onnxruntime-gpu==1.11.0
 timm==0.4.12
