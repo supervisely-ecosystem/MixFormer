@@ -1,1 +1,1 @@
-git+https://github.com/supervisely/supervisely.git@threading-inference
+git+https://github.com/supervisely/supervisely.git@track-api-sync-endpoint
