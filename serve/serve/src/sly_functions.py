@@ -25,6 +25,8 @@ class Tracker(object):
         search_area_scale: float = 4.5,
     ) -> None:
         self.parameter_name = 'baseline_large'
+        self.name = name
+        self.search_area_scale = search_area_scale
         if name is SupportedModels.VIT:
             self.model = 'mixformer_vit_large_online.pth.tar'
         else:
@@ -38,7 +40,18 @@ class Tracker(object):
         # params.online_sizes = 5
         self.tracker = tracker_class(params, "vot20")
         self.tracker.network = self.tracker.network.cuda().eval()
+        self.shared_network = self.tracker.network
         self.stream_to_model = {}
+
+    def _create_fresh_tracker(self):
+        tracker_module = importlib.import_module('lib.test.tracker.{}'.format(self.name.value))
+        tracker_class = tracker_module.get_tracker_class()
+        param_module = importlib.import_module('lib.test.parameter.{}'.format(self.name.value))
+        params = param_module.parameters(self.parameter_name, self.model, self.search_area_scale)
+
+        tracker = tracker_class(params, "vot20")
+        tracker.network = self.shared_network
+        return tracker
 
     def _get_tracker_for_current_stream(self):
         try:
@@ -47,9 +60,7 @@ class Tracker(object):
             stream_id = id(stream)
 
             if stream_id not in self.stream_to_model:
-                # Create a per-stream stateful tracker
-                tracker = copy.deepcopy(self.tracker)
-                tracker.network = self.tracker.network  # share model weights
+                tracker = self._create_fresh_tracker()
                 self.stream_to_model[stream_id] = tracker
 
             return self.stream_to_model[stream_id]
