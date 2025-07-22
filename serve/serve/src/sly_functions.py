@@ -5,6 +5,8 @@ from enum import Enum
 from cv2 import Mat
 
 
+from supervisely._utils import logger
+
 class SupportedModels(Enum):
     VIT: str = 'mixformer_vit_online'
     CONVMAE: str = 'mixformer_convmae_online'
@@ -57,6 +59,7 @@ class Tracker(object):
     def initialize(self, rgb_image: Mat, x: int, y: int, w: int, h: int):
         init_info = {"init_bbox": [x, y, w, h]}
         tracker = self._get_tracker_for_current_stream()
+        logger.debug(f"Initializing on tracker with id: {id(tracker)}")
         tracker.initialize(rgb_image, init_info)
     
     def track(self, rgb_image: Mat) -> Tuple[int, int, int, int]:
@@ -68,6 +71,7 @@ class Tracker(object):
         :rtype: Tuple[int, int, int, int]
         """
         tracker = self._get_tracker_for_current_stream()
+        logger.debug(f"Tracking on tracker with id: {id(tracker)}")
         out = tracker.track(rgb_image, {})
         return out['target_bbox']
     
