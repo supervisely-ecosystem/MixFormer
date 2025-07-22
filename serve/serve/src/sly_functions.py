@@ -1,3 +1,4 @@
+import copy
 import importlib
 from typing import Tuple
 from enum import Enum
@@ -34,10 +35,29 @@ class Tracker(object):
         # params.update_interval = 20
         # params.online_sizes = 5
         self.tracker = tracker_class(params, "vot20")
+        self.tracker.network = self.tracker.network.cuda().eval()
+        self.stream_to_model = {}
+
+    def _get_tracker_for_current_stream(self):
+        try:
+            import torch
+            stream = torch.cuda.current_stream()
+            stream_id = id(stream)
+
+            if stream_id not in self.stream_to_model:
+                # Create a per-stream stateful tracker
+                tracker = copy.deepcopy(self.tracker)
+                tracker.network = self.tracker.network  # share model weights
+                self.stream_to_model[stream_id] = tracker
+
+            return self.stream_to_model[stream_id]
+        except ImportError:
+            return self.tracker
     
     def initialize(self, rgb_image: Mat, x: int, y: int, w: int, h: int):
         init_info = {"init_bbox": [x, y, w, h]}
-        self.tracker.initialize(rgb_image, init_info)
+        tracker = self._get_tracker_for_current_stream()
+        tracker.initialize(rgb_image, init_info)
     
     def track(self, rgb_image: Mat) -> Tuple[int, int, int, int]:
         """Track object on given image.
@@ -47,7 +67,8 @@ class Tracker(object):
         :return: bbox parameters (x, y, w, h)
         :rtype: Tuple[int, int, int, int]
         """
-        out = self.tracker.track(rgb_image, {})
+        tracker = self._get_tracker_for_current_stream()
+        out = tracker.track(rgb_image, {})
         return out['target_bbox']
     
     def update_init(self, rgb_image: Mat, x: int, y: int, h: int, w: int):
