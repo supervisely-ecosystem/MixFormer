@@ -57,7 +57,7 @@ class Tracker(object):
         try:
             import torch
             stream = torch.cuda.current_stream()
-            stream_id = id(stream)
+            stream_id = stream.cuda_stream
 
             logger.debug(f"Stream ID: {stream_id}, Stream: {stream}")
             logger.debug(f"Known streams in self.stream_to_model: {list(self.stream_to_model.keys())}")
