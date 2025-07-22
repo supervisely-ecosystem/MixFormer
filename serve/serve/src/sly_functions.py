@@ -59,11 +59,20 @@ class Tracker(object):
             stream = torch.cuda.current_stream()
             stream_id = id(stream)
 
+            logger.debug(f"Stream ID: {stream_id}, Stream: {stream}")
+            logger.debug(f"Known streams in self.stream_to_model: {list(self.stream_to_model.keys())}")
+            logger.debug(f"Is stream_id in self.stream_to_model? {stream_id in self.stream_to_model}")
+        
             if stream_id not in self.stream_to_model:
+                logger.debug(f"Creating NEW tracker for stream {stream_id}")
                 tracker = self._create_fresh_tracker()
                 self.stream_to_model[stream_id] = tracker
+            else:
+                logger.debug(f"Using EXISTING tracker for stream {stream_id}")
 
-            return self.stream_to_model[stream_id]
+            tracker = self.stream_to_model[stream_id]
+            logger.debug(f"Returning tracker with id: {id(tracker)} for stream {stream_id}")
+            return tracker
         except ImportError:
             return self.tracker
     
