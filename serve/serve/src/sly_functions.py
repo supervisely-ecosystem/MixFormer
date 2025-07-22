@@ -50,7 +50,7 @@ class Tracker(object):
         params = param_module.parameters(self.parameter_name, self.model, self.search_area_scale)
 
         tracker = tracker_class(params, "vot20")
-        tracker.network = self.shared_network
+        # tracker.network = self.shared_network
         return tracker
 
     def _get_tracker_for_current_stream(self):
