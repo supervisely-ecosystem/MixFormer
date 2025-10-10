@@ -17,7 +17,7 @@ state-of-the-art interactive object tracking (CVPR2022) integrated into Supervis
     <a href="#Demo">Demo</a>
 </p>
 
-[![](https://img.shields.io/badge/supervisely-ecosystem-brightgreen)](https://ecosystem.supervisely.com/apps/supervisely-ecosystem/mixformer)
+[![](https://img.shields.io/badge/supervisely-ecosystem-brightgreen)](../../../../supervisely-ecosystem/mixformer)
 [![](https://img.shields.io/badge/slack-chat-green.svg?logo=slack)](https://supervisely.com/slack)
 ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/supervisely-ecosystem/mixformer)
 [![views](https://app.supervisely.com/img/badges/views/supervisely-ecosystem/mixformer/serve/serve.png)](https://supervisely.com)
@@ -64,7 +64,7 @@ Mixformer is an end-to-end tracking framework without post-processing.
 
 0. This object tracking app is started by default in most cases by an instance administrator. If it isn't available in the video labeling tool, you can contact your Supervisely instance admin or run this app by yourself following the steps below.
 
-2. Add [MixFormer object tracking (CVPR2022)](https://ecosystem.supervisely.com/apps/supervisely-ecosystem/mix-former/serve/serve) from Ecosystem.  
+2. Add [MixFormer object tracking (CVPR2022)](../../../../supervisely-ecosystem/mix-former/serve/serve) from Ecosystem.  
 
 <img data-key="sly-module-link" data-module-slug="supervisely-ecosystem/mixformer/serve/serve" src="https://github.com/supervisely-ecosystem/MixFormer/assets/119248312/e74e2bd9-f915-48b1-bb97-ee808326dff5" width="500px" style='padding-bottom: 20px'/> 
 
