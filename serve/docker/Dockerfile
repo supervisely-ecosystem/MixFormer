@@ -38,3 +38,5 @@ COPY dev_requirements.txt /reqs/requirements.txt
 RUN pip3 install -r /reqs/requirements.txt
 
 RUN apt update && apt install -y python-is-python3
+
+LABEL python_sdk_version=6.73.468
