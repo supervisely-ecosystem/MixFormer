@@ -1,5 +1,5 @@
 # FROM nvidia/cuda:11.8.0-devel-ubuntu20.04
-FROM nvidia/cuda:11.1.1-devel-ubuntu20.04
+FROM nvidia/cuda:12.8.1-devel-ubuntu20.04
 ENV TZ="Europe/Tallinn"
 ENV DEBIAN_FRONTEND=noninteractive
 
@@ -31,8 +31,7 @@ RUN cd /weights/models && wget --no-check-certificate 'https://github.com/superv
 RUN apt update && apt install -y ninja-build
 RUN pip3 install --upgrade pip
 RUN pip3 install --upgrade pillow setuptools wheel
-RUN pip3 install torch==1.8.1+cu111 torchvision==0.9.1+cu111 -f https://download.pytorch.org/whl/torch_stable.html
-
+RUN pip3 install --no-cache-dir torch==2.7.1 torchvision==0.22.1 --index-url https://download.pytorch.org/whl/cu128
 RUN mkdir /reqs
 COPY dev_requirements.txt /reqs/requirements.txt
 RUN pip3 install -r /reqs/requirements.txt
