@@ -1,2 +1,2 @@
-docker build -t supervisely/mixformer:1.0.13 . && \
-docker push supervisely/mixformer:1.0.13
+docker build -t supervisely/mixformer:1.0.14 . && \
+docker push supervisely/mixformer:1.0.14
