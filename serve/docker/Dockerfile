@@ -30,7 +30,7 @@ RUN cd /weights/models && wget --no-check-certificate 'https://github.com/superv
 
 RUN apt update && apt install -y ninja-build
 RUN pip3 install --upgrade pip
-RUN pip3 install --upgrade pillow setuptools wheel
+RUN pip3 install --upgrade pillow "setuptools<70.0.0" wheel
 RUN pip3 install --no-cache-dir torch==2.7.1 torchvision==0.22.1 --index-url https://download.pytorch.org/whl/cu128
 RUN mkdir /reqs
 COPY dev_requirements.txt /reqs/requirements.txt
