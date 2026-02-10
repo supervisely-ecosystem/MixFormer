@@ -1,2 +1,5 @@
-docker build -t supervisely/mixformer:1.0.14 . && \
+
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+cd "$SCRIPT_DIR/../../"
+docker build -t supervisely/mixformer:1.0.14 -f serve/docker/Dockerfile . && \
 docker push supervisely/mixformer:1.0.14
