@@ -1,4 +1,12 @@
 git+https://github.com/supervisely/supervisely.git@tracked-frames
+
+-f https://download.pytorch.org/whl/torch_stable.html
+
+# Torch 1.8 wheels are built against the NumPy 1.x ABI.
+numpy<2
+torch==1.8.1+cu111
+torchvision==0.9.1+cu111
+
 PyYAML
 easydict
 cython
@@ -21,3 +29,4 @@ timm==0.4.12
 yacs
 einops
 thop
+python-dotenv
