@@ -1,11 +1,14 @@
 supervisely==6.73.571
 
--f https://download.pytorch.org/whl/torch_stable.html
+# RTX 50 / Blackwell agents require CUDA 12.8-capable torch wheels.
+--extra-index-url https://download.pytorch.org/whl/cu128
 
-# Torch 1.8 wheels are built against the NumPy 1.x ABI.
+# Keep the legacy tracking stack on NumPy 1.x-compatible wheels.
 numpy<2
-torch==1.8.1+cu111
-torchvision==0.9.1+cu111
+torch==2.10.0+cu128 ; platform_system == "Linux"
+torch==2.10.0 ; platform_system != "Linux"
+torchvision==0.25.0+cu128 ; platform_system == "Linux"
+torchvision==0.25.0 ; platform_system != "Linux"
 
 PyYAML
 easydict
@@ -16,15 +19,12 @@ pycocotools
 jpeg4py
 tb-nightly
 tikzplotlib
-# git+https://github.com/Lyken17/pytorch-OpCounter.git
 colorama
 lmdb
 scipy
 visdom
 vot-toolkit==0.7.1
-# git+https://github.com/votchallenge/vot-toolkit-python
 onnx
-onnxruntime-gpu==1.11.0
 timm==0.4.12
 yacs
 einops
