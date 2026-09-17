@@ -1,4 +1,4 @@
-supervisely==6.73.495
+supervisely[video-av]==6.74.36
 # git+https://github.com/supervisely/supervisely.git@server-healthchecks-and-cache-error-fix
 PyYAML
 easydict

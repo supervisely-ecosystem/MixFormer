@@ -11,6 +11,7 @@ from lib.test.evaluation import create_default_local_file_ITP_test
 from lib.train.admin import create_default_local_file_ITP_train
 
 import sly_functions as F
+from streaming_frames import use_streaming_frames
 import supervisely as sly
 import supervisely.imaging.image as sly_image
 from supervisely.nn.inference import BBoxTracking
@@ -72,6 +73,11 @@ else:
 
 
 mixformer = MixFormer()
+
+# Frames now come from the video in one streamed decode rather than one
+# videos.download-frame request each. Applied after construction, which is what
+# creates the cache it replaces. See streaming_frames.py for why.
+use_streaming_frames(mixformer)
 
 if sly.is_production():
     mixformer.serve()
