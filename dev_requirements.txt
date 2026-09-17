@@ -1,4 +1,4 @@
-supervisely==6.73.495
+supervisely[video-av]==6.74.36
 # git+https://github.com/supervisely/supervisely.git@server-healthchecks-and-cache-error-fix
 PyYAML
 easydict
@@ -11,7 +11,7 @@ tb-nightly
 tikzplotlib
 # git+https://github.com/Lyken17/pytorch-OpCounter.git
 colorama
-lmdb
+lmdb==1.4.1
 scipy
 visdom
 vot-toolkit==0.7.1
